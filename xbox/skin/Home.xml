@@ -1,0 +1,94 @@
+<!--
+  CimoFlix Home. Replaces Project Mayhem III Home.xml (keep window id 0).
+
+  The favourites dialog opens OVER this window, and pressing B dismisses back
+  to it, so Home is styled to match instead of showing the stock skin.
+  Coordinate space is 720x576 (PAL). Literal AARRGGBB colors on purpose - see
+  DialogFavourites.xml.
+-->
+<window id="0">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="image">
+			<description>full-bleed black background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>black.png</texture>
+		</control>
+		<control type="label">
+			<description>wordmark</description>
+			<posx>60</posx>
+			<posy>170</posy>
+			<width>600</width>
+			<height>56</height>
+			<font>cimoflix48</font>
+			<textcolor>FFE50914</textcolor>
+			<align>left</align>
+			<label>CIMOFLIX</label>
+		</control>
+		<control type="image">
+			<description>red divider</description>
+			<posx>60</posx>
+			<posy>232</posy>
+			<width>600</width>
+			<height>4</height>
+			<texture>list-focus.png</texture>
+			<colordiffuse>FFE50914</colordiffuse>
+		</control>
+		<control type="label">
+			<posx>60</posx>
+			<posy>244</posy>
+			<width>600</width>
+			<height>26</height>
+			<font>font101</font>
+			<textcolor>FF8A8A92</textcolor>
+			<align>left</align>
+			<label>Personal media library</label>
+		</control>
+		<control type="button" id="50">
+			<posx>60</posx>
+			<posy>310</posy>
+			<width>260</width>
+			<height>40</height>
+			<label>Open library</label>
+			<font>cimoflix26b</font>
+			<textcolor>FFFFFFFF</textcolor>
+			<texturefocus colordiffuse="FFE50914">list-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textoffsetx>16</textoffsetx>
+			<aligny>center</aligny>
+			<onclick>ActivateWindow(favourites)</onclick>
+			<onup>51</onup>
+			<ondown>51</ondown>
+		</control>
+		<control type="button" id="51">
+			<posx>60</posx>
+			<posy>356</posy>
+			<width>260</width>
+			<height>40</height>
+			<label>Settings</label>
+			<font>cimoflix26</font>
+			<textcolor>FFB8B8C0</textcolor>
+			<texturefocus colordiffuse="FF6E0A0F">list-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textoffsetx>16</textoffsetx>
+			<aligny>center</aligny>
+			<onclick>ActivateWindow(settings)</onclick>
+			<onup>50</onup>
+			<ondown>50</ondown>
+		</control>
+		<control type="label">
+			<posx>60</posx>
+			<posy>522</posy>
+			<width>600</width>
+			<height>24</height>
+			<font>font101</font>
+			<textcolor>FF8A8A92</textcolor>
+			<align>left</align>
+			<label>A  select</label>
+		</control>
+	</controls>
+</window>

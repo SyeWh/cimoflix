@@ -1,0 +1,105 @@
+<!--
+  CimoFlix library screen. Forked from Project Mayhem III DialogFavourites.xml.
+
+  Do not change: window id 134 (WINDOW_DIALOG_FAVOURITES), list control id 450
+  (FAVOURITES_LIST in the C++), or <defaultcontrol always="true">450</defaultcontrol>.
+  The binary looks these up by number.
+
+  Coordinate space is 720x576 (PAL), NOT 1280x720. Colors are literal AARRGGBB
+  on purpose: a named color that isn't defined in colors/defaults.xml renders
+  as near-transparent, so literals keep the screen readable even if the
+  colors.append.xml step is skipped.
+-->
+<window type="dialog" id="134">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>full-bleed black background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>720</width>
+			<height>576</height>
+			<texture>black.png</texture>
+		</control>
+		<control type="label">
+			<description>wordmark</description>
+			<posx>60</posx>
+			<posy>36</posy>
+			<width>600</width>
+			<height>50</height>
+			<font>cimoflix48</font>
+			<textcolor>FFE50914</textcolor>
+			<align>left</align>
+			<label>CIMOFLIX</label>
+		</control>
+		<control type="image">
+			<description>red divider under the wordmark (light texture tinted red; black.png cannot be tinted)</description>
+			<posx>60</posx>
+			<posy>96</posy>
+			<width>600</width>
+			<height>4</height>
+			<texture>list-focus.png</texture>
+			<colordiffuse>FFE50914</colordiffuse>
+		</control>
+		<control type="list" id="450">
+			<posx>60</posx>
+			<posy>124</posy>
+			<width>600</width>
+			<height>384</height>
+			<onleft>450</onleft>
+			<onright>450</onright>
+			<onup>450</onup>
+			<ondown>450</ondown>
+			<itemlayout height="48">
+				<control type="label">
+					<posx>16</posx>
+					<posy>0</posy>
+					<width>568</width>
+					<height>48</height>
+					<font>cimoflix26</font>
+					<textcolor>FFF2F2F2</textcolor>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="48">
+				<control type="image">
+					<posx>0</posx>
+					<posy>2</posy>
+					<width>600</width>
+					<height>44</height>
+					<texture>list-focus.png</texture>
+					<colordiffuse>FFE50914</colordiffuse>
+				</control>
+				<control type="label">
+					<posx>16</posx>
+					<posy>0</posy>
+					<width>568</width>
+					<height>48</height>
+					<font>cimoflix26b</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="label">
+			<description>controller hint</description>
+			<posx>60</posx>
+			<posy>522</posy>
+			<width>600</width>
+			<height>24</height>
+			<font>font101</font>
+			<textcolor>FF8A8A92</textcolor>
+			<align>left</align>
+			<label>A  play      B  home</label>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,15 @@
+<!--
+  ADDITION, not a replacement. Optional.
+
+  The CimoFlix skin files use literal AARRGGBB values on purpose: if a named
+  color is missing from colors/defaults.xml, XBMC parses the name as hex and
+  the text renders near-transparent. Literals cannot fail that way.
+
+  If you want the names available for future skin edits, paste the lines below
+  INSIDE the existing <colors> element of
+  skins/Project Mayhem III/colors/defaults.xml.
+-->
+<color name="cimored">FFE50914</color>
+<color name="cimoreddim">FF6E0A0F</color>
+<color name="cimogrey">FF8A8A92</color>
+<color name="cimowhite">FFF2F2F2</color>

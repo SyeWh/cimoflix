@@ -1,0 +1,28 @@
+<!--
+  ADDITION, not a replacement.
+
+  Open skins/Project Mayhem III/Fonts.xml on the console and paste the three
+  <font> blocks below INSIDE the existing  <fontset id="Default" unicode="true">
+  element (next to font101, font13, etc). The CimoFlix skin files reference
+  these names; without them the wordmark and list fall back to the default font.
+
+  Only the "Default" fontset matters: it is the active one, and it is the only
+  set whose TTF (FrancophilSans.ttf) actually ships in the skin's fonts folder.
+-->
+<font>
+	<name>cimoflix48</name>
+	<filename>FrancophilSans.ttf</filename>
+	<size>48</size>
+	<style>bold</style>
+</font>
+<font>
+	<name>cimoflix26</name>
+	<filename>FrancophilSans.ttf</filename>
+	<size>26</size>
+</font>
+<font>
+	<name>cimoflix26b</name>
+	<filename>FrancophilSans.ttf</filename>
+	<size>26</size>
+	<style>bold</style>
+</font>
