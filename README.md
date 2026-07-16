@@ -49,6 +49,8 @@ To run locally: `cd web && npm install && CIMOFLIX_ADMIN_PASSWORD=... BLOB_READ_
 
 ## 2. Install on the console
 
+Full step-by-step guide: **[xbox/README.md](xbox/README.md)**. Short version:
+
 Everything under `xbmc360/` is already prepared — FTP/copy that whole folder
 to the console as your XBMC-360 install and you are done. The pieces, if you
 would rather apply them to an existing install:
