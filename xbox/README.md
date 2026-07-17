@@ -87,10 +87,14 @@ Notes:
   dashboard instead and adjust the path to wherever XBMC lives, e.g.
   `ftp://xbox:xbox@CONSOLE-IP/Hdd/Apps/XBMC360/system/favourites.xml`.
 - Re-run the two commands whenever you add or remove titles. There is no
-  auto-sync and there cannot be: the console's Python has no networking, and
-  the console cannot browse HTTPS directories. Pushing a file is the design.
-- Restart XBMC (or reboot) after syncing — favourites are read when the
-  dialog loads.
+  auto-sync on the console and there cannot be: its Python has no networking,
+  and it cannot browse HTTPS directories. Pushing a file is the design.
+- To make the push painless, use the ready-made wrappers in `sync/`:
+  `termux-sync.sh` gives you a one-tap sync button on an Android home screen
+  (no PC involved), and `sync.ps1` can run as a Windows Scheduled Task every
+  10 minutes while your PC is on. Setup instructions are inside each file.
+- No restart needed after syncing: the favourites list is re-read every time
+  the dialog opens. Press **B** (back to home), then reopen the library.
 
 ## Step 5 — Daily use
 

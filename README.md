@@ -95,9 +95,22 @@ curl -s "https://cimoflix.vercel.app/favourites.xml" -o favourites.xml
 curl -T favourites.xml "ftp://xbox:xbox@192.168.1.50/system/favourites.xml"
 ```
 
-There is no sync daemon and there never will be: the console cannot ask the
-server what changed (it can *play* an HTTPS URL but cannot *browse* one), so
-the library is pushed as a file.
+There is no sync daemon on the console and there never will be: it cannot ask
+the server what changed (it can *play* an HTTPS URL but cannot *browse* one),
+so the library is pushed as a file. The `sync/` folder has two thin wrappers
+around those commands: a one-tap Termux widget script for Android and a
+PowerShell script suitable for a Windows Scheduled Task.
+
+## 4b. Where to put the actual videos
+
+Vercel Blob on the free (Hobby) plan holds about 1 GB — roughly half of one
+720p movie — so **uploads are for small files; "Add a link" is the main
+path.** Host big files anywhere that serves a plain HTTPS MP4 and add the
+URL. Cloudflare R2's free tier is the sweet spot: 10 GB storage, unlimited
+free egress (streaming costs nothing), HTTP Range support (seeking works),
+and browser/phone uploads via its dashboard. Make the bucket public, copy the
+file's public URL, paste it into CimoFlix. The console cannot tell the
+difference — everything streams through the same `/api/play` redirect.
 
 ## 5. Normalise media before adding it
 
